@@ -1,9 +1,9 @@
 <?php
 require_once("config/conexion.php");
 if(isset($_SESSION["usuario"])){ 
-require_once('header.php');
+require_once('header2.php');
 require_once('modals/modal_detalle_ventas.php');
-date_default_timezone_set('America/El_Salvador'); $hoy = date("Y-m-d");;
+date_default_timezone_set('America/El_Salvador'); $hoy = date("Y-m-d");
 ?>
 
 <div class="content-wrapper">
@@ -78,7 +78,7 @@ date_default_timezone_set('America/El_Salvador'); $hoy = date("Y-m-d");;
 <input type="hidden" name="sucursal" id="sucursal" value="<?php echo $_SESSION["sucursal"];?>"/>
 <input type="hidden" name="sucursal" id="sucursal_usuario" value="<?php echo $_SESSION["sucursal_usuario"];?>"/>
 
-<script src="js/ventas.js"> </script>
+<script src="js/ventas.js"></script>
 <script type="text/javascript">
   function get_date_corte() {
     let fecha_corte = document.getElementById("date_corte").value;

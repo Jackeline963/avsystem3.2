@@ -476,8 +476,18 @@ $conectar=parent::conexion();
   $sql10->bindValue(2,$id_paciente);
   $sql10->bindValue(3,$numero_orden);
   $sql10->execute();
+}
 
-
+////////LISTA RECIBOS EMITIDOS
+public function listar_recibos($sucursal){
+    $conectar=parent::conexion();
+    parent::set_names();
+    $suc = "%".$sucursal."%";
+    $sql="select r.id_recibo,r.fecha,r.numero_recibo,r.recibi_de,r.monto,r.a_anteriores,r.abono_act,r.saldo,r.forma_pago,u.usuario from recibos as r inner join usuarios as u on r.id_usuario=u.id_usuario where r.sucursal like ? order by id_recibo desc;";
+    $sql=$conectar->prepare($sql);
+    $sql->bindValue(1,$suc);
+    $sql->execute();
+    return $resultado= $sql->fetchAll(PDO::FETCH_ASSOC);
 }
 
 }
