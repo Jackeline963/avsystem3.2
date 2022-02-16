@@ -3,7 +3,7 @@ var tabla_recibos_emitidos;
 function init(){
    get_correlativo_recibo();
     //prueba();
-    //listar_recibos_emitidos();
+    listar_recibos_emitidos();
     listar_reporte_recibos();
 }
 

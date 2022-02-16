@@ -1,7 +1,7 @@
 <?php
 require_once("config/conexion.php");
 if(isset($_SESSION["usuario"])){ 
-require_once('header2.php');
+require_once('header_dos.php');
 require_once('modals/modal_detalle_ventas.php');
 date_default_timezone_set('America/El_Salvador'); $hoy = date("Y-m-d");
 ?>
@@ -75,6 +75,7 @@ date_default_timezone_set('America/El_Salvador'); $hoy = date("Y-m-d");
  
   </div>
 </div>
+<?php require_once("footer.php");?>
 <input type="hidden" name="sucursal" id="sucursal" value="<?php echo $_SESSION["sucursal"];?>"/>
 <input type="hidden" name="sucursal" id="sucursal_usuario" value="<?php echo $_SESSION["sucursal_usuario"];?>"/>
 

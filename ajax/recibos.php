@@ -265,10 +265,10 @@ switch ($_GET["op"]) {
     $sub_array[] = $row["fecha"];
     $sub_array[] = $row["numero_recibo"];
     $sub_array[] = $row["recibi_de"];
-    $sub_array[] = "$".number_format(($row["monto"]),2,".",",");
-    $sub_array[] = "$".number_format(($row["a_anteriores"]),2,".",",");
-    $sub_array[] = "$".number_format(($row["abono_act"]),2,".",",");
-    $sub_array[] = "$".number_format(($row["saldo"]),2,".",",");
+    $sub_array[] = "$".number_format((float)$row["monto"],2,".",",");
+    $sub_array[] = "$".number_format((float)$row["a_anteriores"],2,".",",");
+    $sub_array[] = "$".number_format((float)$row["abono_act"],2,".",",");
+    $sub_array[] = "$".number_format((float)$row["saldo"],2,".",",");
     $sub_array[] = $row["forma_pago"];
     $sub_array[] = $row["empresas"];
     $sub_array[] = $row["observaciones"];

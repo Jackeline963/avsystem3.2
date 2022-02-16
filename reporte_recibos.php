@@ -13,7 +13,7 @@ date_default_timezone_set('America/El_Salvador'); $hoy = date("Y-m-d");;
       <div class="row mb-2">
         <div class="col-sm-9">
         <section>
-          <h2 style="text-align:center"><i class="far fa-file-alt" style="color:green"></i><strong>  REPORTE GENERAL DE RECIBOS</strong></h2>
+          <h5 style="text-align:center"><i class="far fa-file-alt" style="color:green"></i><strong>  REPORTE GENERAL DE RECIBOS</strong></h5>
         </section>
           </div>
           <div class="col-sm-3">

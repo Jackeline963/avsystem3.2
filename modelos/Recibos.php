@@ -483,7 +483,6 @@ public function listar_recibos($sucursal){
     $conectar=parent::conexion();
     parent::set_names();
     $suc = "%".$sucursal."%";
-    //$sql="select r.id_recibo,r.fecha,r.numero_recibo,r.recibi_de,r.monto,r.a_anteriores,r.abono_act,r.saldo,r.forma_pago,u.usuario from recibos as r inner join usuarios as u on r.id_usuario=u.id_usuario where r.sucursal like ? order by id_recibo desc;";
     $sql="select r.id_recibo,r.fecha,r.numero_recibo,r.recibi_de,r.monto,r.a_anteriores,r.abono_act,r.saldo,r.forma_pago,u.usuario,p.empresas,r.observaciones from recibos as r inner join usuarios as u on r.id_usuario=u.id_usuario inner join pacientes as p on r.id_paciente=p.id_paciente where r.sucursal like ? order by r.id_recibo desc;";
     $sql=$conectar->prepare($sql);
     $sql->bindValue(1,$suc);
