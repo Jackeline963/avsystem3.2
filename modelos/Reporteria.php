@@ -1,7 +1,6 @@
 <?php  
 //conexion a la base de datos
 require_once("config/conexion.php");
-require_once("../config/conexion.php");
 
 class Reporteria extends Conectar{
 
@@ -406,18 +405,6 @@ public function get_datos_prima_subtotal($n_orden,$id_paciente){
     select*from ventas where ((sucursal = "Metrocentro") or (sucursal="Empresarial-Metrocentro" and optometra="7")) and fecha_venta like "%06-2021%";
 }*/
 
-////////LISTA RECIBOS EMITIDOS
-public function listar_facturas($sucursal){
-    $conectar=parent::conexion();
-    parent::set_names();
-    $suc = "%".$sucursal."%";
-    //$sql="select r.id_recibo,r.fecha,r.numero_recibo,r.recibi_de,r.monto,r.a_anteriores,r.abono_act,r.saldo,r.forma_pago,u.usuario from recibos as r inner join usuarios as u on r.id_usuario=u.id_usuario where r.sucursal like ? order by id_recibo desc;";
 
-    $sql="select cf.id_correlativo,cf.n_correlativo,cf.fecha,cf.titular,c.monto,cf.sucursal from correlativo_factura as cf inner join creditos as c on cf.n_venta=c.numero_venta where cf.sucursal like ? order by cf.id_correlativo desc;";
-    $sql=$conectar->prepare($sql);
-    $sql->bindValue(1,$suc);
-    $sql->execute();
-    return $resultado= $sql->fetchAll(PDO::FETCH_ASSOC);
-}
 
 }

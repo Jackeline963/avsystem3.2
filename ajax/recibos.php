@@ -270,6 +270,8 @@ switch ($_GET["op"]) {
     $sub_array[] = "$".number_format(($row["abono_act"]),2,".",",");
     $sub_array[] = "$".number_format(($row["saldo"]),2,".",",");
     $sub_array[] = $row["forma_pago"];
+    $sub_array[] = $row["empresas"];
+    $sub_array[] = $row["observaciones"];
 
     $data[] = $sub_array;
   }

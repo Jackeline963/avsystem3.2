@@ -41,7 +41,9 @@ date_default_timezone_set('America/El_Salvador'); $hoy = date("Y-m-d");;
           <th>Abonos</th>
           <th>Abonos Act.</th>
           <th>Saldo</th>
-          <th>Forma cobro</th>
+          <th>Forma Cobro</th>
+          <th>Empresa</th>
+          <th>Observaciones</th>
           </tr>
         </thead>
         <tbody style="font-family: Helvetica, Arial, sans-serif;font-size: 11px;text-align: center;"></tbody>
