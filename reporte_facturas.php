@@ -38,6 +38,7 @@ date_default_timezone_set('America/El_Salvador'); $hoy = date("Y-m-d");;
           <th>#Correlativo</th>
           <th>Nombre del paciente</th>
           <th>Monto</th>
+          <th>Sucursal</th>
           </tr>
         </thead>
         <tbody style="font-family: Helvetica, Arial, sans-serif;font-size: 11px;text-align: center;"></tbody>
