@@ -64,4 +64,5 @@ function emitir_ccf(id_paciente,numero_venta,nombres){
 
   }
 
+
 init();

@@ -5,6 +5,7 @@ require_once("../modelos/Reportes.php");
 $reportes = new Reporteria();
 
 switch ($_GET["op"]) {
+
 	case 'listar_facturas':
 	$sucursal = $_POST['sucursal'];
 
@@ -39,7 +40,5 @@ switch ($_GET["op"]) {
 	echo json_encode($results);
 	break;
 	
-	default:
-		// code...
-	break;
+
 }
