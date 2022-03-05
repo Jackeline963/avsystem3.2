@@ -70,6 +70,17 @@ class Externos extends conectar
 
     }
 
-	}/////FIN CLASS
+///EMPRESAS PARA VISUALIZAR CREDITOS
+    public function get_empresas_creditos(){
+    	$conectar = parent::conexion();
+    	parent::set_names();
+    	$sql = "select*from empresas;";
+    	$sql=$conectar->prepare($sql);
+    	$sql->execute();
+    	return $resultado= $sql->fetchAll(PDO::FETCH_ASSOC);
+    }
 
+
+
+	}/////FIN CLASS
  ?>

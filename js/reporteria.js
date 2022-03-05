@@ -40,14 +40,14 @@ function emitir_ccf(id_paciente,numero_venta,nombres){
     var sucursal = $("#sucursal").val();
     var sucursal_usuario = $("#sucursal_usuario").val();
 
-    $("#listar_reporte_facturas").DataTable({
+    $("#creditos_global").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
       dom: 'Bfrtip',
       "buttons": [ "excel"],
       "searching": true,
       "ajax":
       {
-        url: "ajax/reporteria.php?op=listar_facturas",
+        url: "ajax/creditos.php?op=listar_creditos_cobrar",
         type : "post",
         dataType : "json",    
         data:{sucursal:sucursal,sucursal_usuario:sucursal_usuario},    
