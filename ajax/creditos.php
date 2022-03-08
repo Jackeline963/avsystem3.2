@@ -911,7 +911,7 @@ $sucursal = $_POST['sucursal'];
   }elseif($_POST["ver_credito"]=="Creditos_Pendientes" and $_POST["nombre_empresa"]==""){
     $datos=$creditos->listar_creditos_pendientes($suc,$_POST["ver_credito"]);
   }elseif($_POST["ver_credito"]=="Creditos_Finalizados" and $_POST["nombre_empresa"]==""){
-    $datos=$creditos->listar_creditos_finalizados($suc,$_POST["ver_credito"],);
+    $datos=$creditos->listar_creditos_finalizados($suc,$_POST["ver_credito"]);
   }elseif($_POST["ver_credito"]=="Creditos_Pendientes" and $_POST["nombre_empresa"] !=""){
     $datos=$creditos->listar_creditos_pendientes_emp($suc,$_POST["nombre_empresa"],$_POST["ver_credito"]);
   }elseif($_POST["ver_credito"]=="Creditos_Finalizados" and $_POST["nombre_empresa"] !=""){
@@ -958,7 +958,7 @@ $sucursal = $_POST['sucursal'];
     $sub_array[] = $row["empresas"];
     $sub_array[] = $row["nombres"];
     $sub_array[] = "$".number_format($row["monto"],2,".",",");
-    $sub_array[] = $row["fecha_inicio"];
+    $sub_array[] = date("d-m-Y",strtotime($row["fecha_inicio"]));
     $sub_array[] = $row["fecha_finalizacion"];
     $sub_array[] = $row["plazo"]." meses";  
     $sub_array[] = "$".number_format($row["saldo"],2,".",",");

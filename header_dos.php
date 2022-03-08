@@ -182,8 +182,7 @@ $level_user = $_SESSION["id_user_emp"];
                   <i class="far fa-circle text-danger nav-icon"></i>
                   <p>Control Ordenes</p>
                 </a>
-              </li>
-              ';
+              </li>';
             }
             ?>
             </li>
@@ -218,7 +217,8 @@ $level_user = $_SESSION["id_user_emp"];
             </a>
           </li>
 
-        <?php if ($_SESSION["Caja Chica"]) {
+        <?php 
+        if ($_SESSION["Caja Chica"]) {
            echo '
           <li class="nav-item">
             <a href="caja_chica.php" class="nav-link">
@@ -242,8 +242,7 @@ $level_user = $_SESSION["id_user_emp"];
                 <span class="right badge badge-danger" style="visibility:hidden">New</span>
               </p>
             </a>
-          </li> 
-            ';
+          </li> ';
           }
         ?>
 
@@ -258,8 +257,7 @@ $level_user = $_SESSION["id_user_emp"];
                 <span class="right badge badge-danger" style="visibility:hidden">New</span>
               </p>
             </a>
-          </li> 
-            ';
+          </li>';
           }
         ?>
         

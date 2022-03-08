@@ -1738,7 +1738,8 @@ function calcularMontoCcf(){
 
     } 
 
-    ///LISTAR TODOS LOS CREDITOS PENDIENTES DE COBRAR
+    ///LISTAR TODOS LOS CREDITOS monitoreo de creditos
+    
   function filtrar_creditos(){
     let ver_credito = $("#ver_credito").val();
     let empresa = $("#nom_empresa").val();
@@ -1787,6 +1788,7 @@ function calcularMontoCcf(){
     }, //cerrando language
   });
   } 
+
 
 init();
 

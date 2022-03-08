@@ -1,3 +1,4 @@
+
 function init() {
   reporte_ventas_gral();
   get_correlativo_venta();
@@ -31,6 +32,7 @@ $(document).ready(function(){
       id_tipo = $(this).val();
       $.post('ajax/ventas.php?op=tipo_pago', { id_tipo: id_tipo }, function(data){
         $("#tipo_pago").html(data);
+        console.log(data);
       });            
     });
   })

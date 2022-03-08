@@ -64,7 +64,7 @@ public function login(){
       in_array(8,$valores)?$_SESSION['EnviosLab']=1:$_SESSION['EnviosLab']=0;
       in_array(9,$valores)?$_SESSION['Control_labs']=1:$_SESSION['Control_labs']=0;    
         
-      header("Location:home.php");
+      //header("Location:home.php");
       exit();
     } else {                         
     //si no existe el registro entonces le aparece un mensaje

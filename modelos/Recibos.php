@@ -4,7 +4,7 @@ require_once("../config/conexion.php");
 class Recibos extends conectar {//inicio de la clase
 
 
-  public function get_numero_recibo($sucursal_correlativo){
+public function get_numero_recibo($sucursal_correlativo){
     $conectar= parent::conexion();
     $sql= "select numero_recibo from recibos where sucursal=? order by id_recibo DESC limit 1;";
     $sql=$conectar->prepare($sql);
